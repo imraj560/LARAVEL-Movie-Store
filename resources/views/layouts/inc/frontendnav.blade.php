@@ -1,5 +1,5 @@
  <header>
-            <div class="logo_space"><a style="text-decoration: none;" href="{{ url('/') }}">Log</a>o</div>
+            <div class="logo_space"><a style="text-decoration: none;" href="{{ url('/') }}"><img src="{{ asset('uploads/movies/movie_logo.png') }}" height="80px" width="70px" /></a></div>
             <div class="hamburger" onclick="toggleClass()">
                 <div class="line"></div>
                 <div class="line"></div>

@@ -1,5 +1,6 @@
 /* Below css should be standard before your start writting more css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -9,13 +10,85 @@
     font-family: 'Poppins', sans-serif;
 }
 
+main{
+
+    position: relative;
+}
+
+/* .login_container{
+
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin:0 auto 0 auto;
+} */
+
+
 header{
 
     display: flex;
     justify-content: space-between;
-    background-color: #f7f7f7;
+    background-color: black;
     padding: 30px 20px;
     height: 80px;
+    position: relative;
+    /* box-shadow: 0px 36px #ffffff21; */
+
+}
+
+.banner{
+
+    width:100vw;
+    height: 100vh;
+    background-image:url('../../uploads/movies/banner.jpg');
+    background-size: cover;
+    background-position: center bottom;
+
+}
+
+.banner-item{
+
+    position: absolute;
+    width: 1100px;
+    height: 150px;
+    /* background-color: gray; */
+    top: 40%;
+    margin: 0 auto 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.banner-item > h1{
+
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+}
+
+.login_button{
+
+    padding: 15px 40px;
+    color:black;
+    background-color: white;
+    border: none;
+    transition: 1s;
+}
+
+.login_button:hover{
+
+    background-color:white;
+    border: 2px solid black;
+}
+
+
+
+.logo_space > a >img {
+
+    align-items: center;
+    position: absolute;
+    top:5px;
 }
 
 .hamburger{
@@ -40,8 +113,8 @@ header{
 .nav-bar > ul > li > a{
 
     padding: 0px 25px;
-    color:black;
-    font-weight: 500;
+    color:white;
+    font-weight: 600;
     text-decoration: none;
 }
 
