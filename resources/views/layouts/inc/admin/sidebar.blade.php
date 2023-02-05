@@ -27,7 +27,7 @@
       <li class="nav-item">
         <a href="{{ url('admin/language/view') }}" class="nav-link">
           <i class="mdi mdi-chart-pie menu-icon"></i>
-          <span class="menu-title">Language</span>
+          <span class="menu-title">Languages</span>
         </a>
       </li>
 
