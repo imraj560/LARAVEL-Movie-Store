@@ -1,0 +1,113 @@
+/* Below css should be standard before your start writting more css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+
+    display: flex;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    padding: 30px 20px;
+    height: 80px;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hamburger .line{
+
+   width: 30px;
+   height: 3px;
+   margin: 6px 0;
+   background-color:gainsboro;
+}
+
+.nav-bar > ul{
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nav-bar > ul > li > a{
+
+    padding: 0px 25px;
+    color:black;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* header css ends here */
+
+
+/* media query for screen sizes */
+
+@media only screen and (max-width: 900px){
+
+    .header{
+
+        position: relative;
+    }
+
+    .hamburger{
+
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-bar{
+
+        position: absolute;
+        top:80px;
+        width: 100vw;
+        left: 0;
+        right: 0;
+        margin: 0 auto 0auto;
+        overflow: hidden;
+        height: 0px;
+        transition: 1s;
+        background-color: #e7e7e7;
+        z-index: 1;
+
+    }
+
+    .nav-bar > ul{
+
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: justify;
+        opacity: 0;
+        transition: 1s;
+    }
+
+    .nav-bar > ul > li{
+
+        margin-bottom: 20px;
+    }
+
+    /* nav bar active class section for click event */
+
+    .nav-bar.active{
+
+        height: 315px;
+    }
+
+    .nav-bar.active > ul{
+
+        opacity: 1;
+    }
+
+
+}
+
+
+
