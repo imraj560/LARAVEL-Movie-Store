@@ -21,6 +21,8 @@
         <main>
             @yield('content')
         </main>
+
+        @include('layouts.inc.frontendfooter')
     </div>
 
 </body>

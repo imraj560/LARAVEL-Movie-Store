@@ -23,8 +23,8 @@
 
                     @else
 
-                        <li><a href="">{{ Auth::user()->name }}</a></li>
-                        <li><a href="">Movies</a></li>
+                        <li><a href="">Hi, {{ Auth::user()->name }}</a></li>
+                        <li><a href="">Store</a></li>
                         <li>
                             <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                             document.getElementById('logout-form').submit();">
