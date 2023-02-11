@@ -24,7 +24,8 @@
                     @else
 
                         <li><a href="">Hi, {{ Auth::user()->name }}</a></li>
-                        <li><a href="">Store</a></li>
+                        <li><a href="{{ url('/store') }}">Store</a></li>
+                        <li><a href="{{ url('/cart') }}">Cart</a></li>
                         <li>
                             <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                             document.getElementById('logout-form').submit();">

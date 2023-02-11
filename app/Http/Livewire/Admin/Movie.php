@@ -42,7 +42,7 @@ class Movie extends Component
 
     public function render()
     {
-        $movies = Movies::orderBy('id','DESC')->paginate(3);
+        $movies = Movies::orderBy('id','DESC')->paginate(10);
         return view('livewire.admin.movie.index', ['movies'=>$movies]);
     }
 }
