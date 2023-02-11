@@ -3,42 +3,34 @@
         <div class="card">
             <div class="card-header" style="background:black; color:white;"><h4>Genre</h4></div>
                 <div class="card-body">
+                    @forelse ($genres as $genre)
 
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Horror</label>
+                        <input wire:model="genreInputs" class="form-check-input" type="checkbox" value="{{ $genre->id }}"/>
+                        <label class="form-check-label" for="exampleCheck1">{{ $genre->name }}</label>
                       </div>
 
-                      <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Comedy</label>
-                      </div>
+                    @empty
 
-                      <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Documentary</label>
-                      </div>
-
+                    @endforelse
 
             </div>
 
             <div class="card-header" style="background:black; color:white;"><h4>Language</h4></div>
             <div class="card-body">
 
+                @forelse ($languages as $language)
+
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">English</label>
+                    <input wire:model="languageInputs" class="form-check-input" type="checkbox" value="{{ $language->id }}"/>
+                    <label class="form-check-label" for="exampleCheck1">{{ $language->name }}</label>
                   </div>
 
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Hindi</label>
-                  </div>
+                @empty
 
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Spanish</label>
-                  </div>
+                @endforelse
+
+
 
 
         </div>
@@ -46,15 +38,15 @@
         <div class="card-header" style="background:black; color:white;"><h4>Price</h4></div>
                 <div class="card-body">
 
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Low To High</label>
-                      </div>
 
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">High To Low</label>
-                      </div>
+                    <label class="d-block">
+                        <input name="priceSort" class="form-check-input" wire:model="priceInput" type="radio" value="high-to-low"/> High To Low
+
+                    </label>
+
+                    <label class="d-block">
+                    <input name="priceSort" class="form-check-input" wire:model="priceInput" type="radio" value="low-to-high"/> High To Low
+                    </label>
 
 
             </div>
