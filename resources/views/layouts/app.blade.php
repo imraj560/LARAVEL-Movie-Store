@@ -12,6 +12,7 @@
     <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @livewireStyles
 </head>
 <body>
     <div id="app">
@@ -27,5 +28,7 @@
 
 </body>
  <script src="{{ asset('assets/js/bootstrap.js') }}"></script>
- @yield('script')
+   @yield('scripts')
+   @livewireScripts
+   @stack('script')
 </html>
