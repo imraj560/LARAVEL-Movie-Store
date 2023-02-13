@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\GenreController;
 use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\MovieController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\StoreController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
@@ -32,6 +33,9 @@ Route::middleware(['auth'])->group(function(){
 
 //store
 Route::get('/store',[StoreController::class,'index']);
+
+//cart
+Route::get('/cart',[CartController::class,'index']);
 
 });
 

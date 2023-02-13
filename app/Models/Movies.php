@@ -33,4 +33,9 @@ class Movies extends Model
 
         return $this->belongsTo(Language::class,'language_id','id');
     }
+
+    // public function cart(){
+
+    //     return $this->belongsTo(Carts::class,'movie_id','id');
+    // }
 }
