@@ -2,10 +2,13 @@
 
 namespace App\Http\Livewire\Frontend;
 
+use App\Models\Cart;
 use App\Models\Genre;
 use App\Models\Movies;
 use Livewire\Component;
 use App\Models\Language;
+use Illuminate\Http\Client\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Store extends Component
 {
@@ -22,7 +25,40 @@ class Store extends Component
 
     public function addCart(int $movie_id){
 
-        dd($movie_id);
+        if(Cart::where('user_id', Auth::user()->id)->where('movie_id',$movie_id)->exists()){
+
+            $this->dispatchBrowserEvent('message',[
+
+                'text' => 'Exists in Cart',
+                'type' => 'danger',
+                'status' => 200
+
+               ]);
+
+        }else{
+
+            Cart::create([
+
+                'user_id' => Auth::user()->id,
+                'movie_id' => $movie_id
+
+            ]);
+
+            session()->flash('message','Added to Cart');
+
+            $this->dispatchBrowserEvent('message',[
+
+                'text' => 'Added to Cart',
+                'type' => 'success',
+                'status' => 200
+
+            ]);
+        }
+
+
+
+
+
     }
 
 
