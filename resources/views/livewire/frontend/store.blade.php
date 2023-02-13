@@ -56,7 +56,7 @@
         <div class="row">
             <div class="form-group" style="margin-bottom:20px;">
 
-                <input style="border:2px solid black;" type="text" class="form-control" id="search" name="search" placeholder="Enter Movie Name">
+                <input wire:model="search" style="border:2px solid black;" type="text" class="form-control" id="search" name="search" placeholder="Enter Movie Name">
               </div>
               @forelse ($movies as $movie)
 
@@ -66,6 +66,7 @@
                     <div class="card-body" style="background:black; color:white;">
                       <p class="card-text">{{ $movie->name }} : RM {{ $movie->price }}</p>
                     </div>
+                    <button wire:click='addCart({{ $movie->id }})' style="margin-top:5px; border:none; border-radius:0" class="btn btn-danger" w-100>Add to Cart</button>
                   </div>
             </div>
 
