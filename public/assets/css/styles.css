@@ -138,6 +138,18 @@ footer{
     text-decoration: none;
 }
 
+.col-3{
+
+    transition: 0.5s;
+    cursor:pointer;
+}
+
+.col-3:hover{
+
+    transform: scale(1.08);
+    z-index: 1;
+}
+
 /* header css ends here */
 
 
