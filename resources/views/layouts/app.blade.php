@@ -11,6 +11,9 @@
 
     <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Alertify css -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     @livewireStyles
 </head>
@@ -28,6 +31,21 @@
 
 </body>
  <script src="{{ asset('assets/js/bootstrap.js') }}"></script>
+ <!--Alertify js-->
+ <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+ <script>
+    window.addEventListener('message', event => {
+
+        if(event.detail){
+
+            alertify.set('notifier','position', 'top-right');
+            alertify.notify(event.detail.text, event.detail.type);
+
+        }
+
+
+    })
+ </script>
    @yield('scripts')
    @livewireScripts
    @stack('script')
