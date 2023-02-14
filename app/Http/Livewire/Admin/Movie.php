@@ -25,6 +25,7 @@ class Movie extends Component
     }
 
     public function destroyMovie(){
+
         $movies = Movies::findOrFail($this->movie_id);
         $destination = $movies->image;
 
