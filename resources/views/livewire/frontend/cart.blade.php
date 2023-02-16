@@ -62,6 +62,8 @@
                     @endphp
                 @empty
 
+                <h5>Your cart is Empty</h5>
+
                 @endforelse
 
 
@@ -70,9 +72,23 @@
                 <tr>
                     <td colspan="5" style="text-align:right;"><h3>Total RM: {{ $totalPrice }}</h3></td>
                 </tr>
+                <tr>
+                    @if($totalPrice != 0)
+                        <td colspan="5"><a href="{{ url('/checkout') }}"><button class="btn btn-success float-end">Checkout</button></a></td>
+                    @endif
+
+                </tr>
             </tfoot>
         </table>
+
+
     </div>
+
+
+</div>
+
+
+
 </div>
 
 </div>
