@@ -1,15 +1,16 @@
 <?php
 
-use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\GenreController;
-use App\Http\Controllers\Admin\LanguageController;
-use App\Http\Controllers\Admin\MovieController;
-use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\Frontend\CartController;
-use App\Http\Controllers\Frontend\StoreController;
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\GenreController;
+use App\Http\Controllers\Admin\MovieController;
+use App\Http\Controllers\Frontend\CartController;
+use App\Http\Controllers\Admin\LanguageController;
+use App\Http\Controllers\Frontend\StoreController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Frontend\CheckoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,9 @@ Route::get('/store',[StoreController::class,'index']);
 
 //cart
 Route::get('/cart',[CartController::class,'index']);
+
+//checkout
+Route::get('/checkout',[CheckoutController::class,'index']);
 
 });
 
