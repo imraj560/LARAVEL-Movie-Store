@@ -41,6 +41,9 @@ Route::get('/cart',[CartController::class,'index']);
 //checkout
 Route::get('/checkout',[CheckoutController::class,'index']);
 
+//thank you page
+Route::get('/thank-you',[CheckoutController::class,'thankYou']);
+
 });
 
 

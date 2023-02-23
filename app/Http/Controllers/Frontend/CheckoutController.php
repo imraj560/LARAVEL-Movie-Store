@@ -12,4 +12,10 @@ class CheckoutController extends Controller
         return view('frontend.checkout.checkout');
 
     }
+
+    public function thankYou(){
+
+        return view('frontend.thankyou.thankyou');
+
+    }
 }

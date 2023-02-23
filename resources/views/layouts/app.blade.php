@@ -48,7 +48,8 @@
     })
 
  </script>
+
    @yield('scripts')
    @livewireScripts
-   @stack('script')
+   @stack('scripts')
 </html>
