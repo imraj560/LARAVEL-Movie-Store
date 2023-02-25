@@ -28,7 +28,7 @@ class Checkout extends Component
 
         if($codOrder){
 
-            Cart::where('user_id',auth()->user()->id)->delete();
+            Carts::where('user_id',auth()->user()->id)->delete();
             session()->flash('message','Order placed Successfully');
             $this->dispatchBrowserEvent('message', [
 
