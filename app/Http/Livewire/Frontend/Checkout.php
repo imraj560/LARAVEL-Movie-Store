@@ -19,6 +19,41 @@ class Checkout extends Component
         'transactionEmit' => 'paidOnlineOrder'
     ];
 
+    public function paidOnlineOrder($value){
+
+        $this->payment_id = $value;
+        $this->payment_mode = "Paid by PayPal";
+
+        $codOrder = $this->placeOrder();
+
+        if($codOrder){
+
+            Cart::where('user_id',auth()->user()->id)->delete();
+            session()->flash('message','Order placed Successfully');
+            $this->dispatchBrowserEvent('message', [
+
+                'text' => 'Order Successfull',
+                'type' => 'success',
+                'status' => 200
+            ]);
+
+            return redirect()->to('thank-you');
+
+        }else{
+
+            $this->dispatchBrowserEvent('message', [
+
+                'text' => 'Order Failed',
+                'type' => 'error',
+                'status' => 500
+            ]);
+
+        }
+
+
+
+    }
+
     public function validationForAll(){
 
         $this->validate();
