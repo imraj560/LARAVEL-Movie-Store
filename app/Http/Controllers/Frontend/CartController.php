@@ -11,4 +11,6 @@ class CartController extends Controller
 
         return view('frontend.cart.view');
     }
+
+
 }
