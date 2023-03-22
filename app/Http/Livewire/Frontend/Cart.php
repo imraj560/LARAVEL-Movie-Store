@@ -27,6 +27,7 @@ class Cart extends Component
 
     public function destroyCart(){
 
+        $this->emit('addCart');
         Carts::findOrFail($this->cart_id)->delete();
         $this->dispatchBrowserEvent('close-modal');
 

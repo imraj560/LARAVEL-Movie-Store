@@ -44,8 +44,8 @@ class Store extends Component
 
             ]);
 
+            $this->emit('addCart');
             session()->flash('message','Added to Cart');
-
             $this->dispatchBrowserEvent('message',[
 
                 'text' => 'Added to Cart',
