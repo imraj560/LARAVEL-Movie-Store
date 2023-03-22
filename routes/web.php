@@ -10,6 +10,7 @@ use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Frontend\StoreController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Frontend\CheckoutController;
 
 /*
@@ -79,6 +80,10 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
     Route::get('user/destroy/{user}',[UserController::class,'destroy']);
     Route::get('user/edit/{user}',[UserController::class,'edit']);
     Route::post('user/update/{user}',[UserController::class,'update']);
+
+    //order 
+    Route::get('order/view',[OrderController::class,'index']);
+    Route::get('/order/download/{order_id}',[OrderController::class,'genPdf']);
 
 
 });

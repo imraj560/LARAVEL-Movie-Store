@@ -7,7 +7,9 @@ use App\Models\Order;
 use Livewire\Component;
 use App\Models\Orderitem;
 use Illuminate\Support\Str;
+use App\Mail\InvoiceOrderMailable;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class Checkout extends Component
 {
@@ -133,6 +135,16 @@ class Checkout extends Component
         if($codOrder){
 
             Carts::where('user_id',auth()->user()->id)->delete();
+
+            try{
+
+                $order = Order::findorFail($codOrder->id);
+                Mail::to("$order->email")->send(new InvoiceOrderMailable($order));
+
+           }catch(\Exception $e){
+
+
+           }
 
             session()->flash('message','Order placed Successfully');
             $this->dispatchBrowserEvent('message', [

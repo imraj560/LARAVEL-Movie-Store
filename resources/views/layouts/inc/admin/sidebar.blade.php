@@ -7,7 +7,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">
+        <a class="nav-link" href="{{ url('admin/order/view') }}">
           <i class="mdi mdi-grid-large menu-icon"></i>
           <span class="menu-title">Orders</span>
         </a>
