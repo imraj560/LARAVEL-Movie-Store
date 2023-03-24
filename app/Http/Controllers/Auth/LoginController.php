@@ -35,7 +35,7 @@ class LoginController extends Controller
 
         }else{
 
-            return redirect('/')->with('status','Welcome Home');
+            return redirect('/store')->with('status','Welcome Home');
         }
     }
 
