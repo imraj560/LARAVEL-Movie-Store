@@ -25,13 +25,15 @@ use App\Http\Controllers\Frontend\CheckoutController;
 */
 
 
-Auth::routes();
+Auth::routes([
+  'verify' => true
+]);
 
 //unauthorized routes
   Route::get('/',[HomeController::class,'index']);
 
 //authorized routes
-Route::middleware(['auth'])->group(function(){
+Route::middleware(['auth','verified'])->group(function(){
 
 //store
 Route::get('/store',[StoreController::class,'index']);
