@@ -10,6 +10,132 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.row{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+
+
+#banner{
+    position:relative;
+    height: 700px;
+    object-fit: contain;
+    background-image: url('../../uploads/movies/moana.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.281) 0px 8px 16px -8px;
+}
+
+#banner_store{
+    position:relative;
+    height: 300px;
+    object-fit: contain;
+    /* background-image: url('../../uploads/movies/moana.jpg'); */
+    background-color:#ebe9e7;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.281) 0px 8px 16px -8px; */
+    font-size: 37px;
+    text-align: center;
+    line-height: 300px;
+}
+
+#text_banner{
+    position: absolute;
+    height: 100px;
+    width: 60%;
+    top: 40%;
+    /* background-color: gray; */
+    overflow-wrap: break-word;
+    padding:0 60px;
+}
+
+#text_banner > h1{
+
+    font-size: 32px;
+    color:white;
+    line-height: 50px;
+}
+
+#animations{
+
+    padding: 20px 0px;
+    margin-top: 30px;
+   
+}
+
+#animation_col{
+
+    transition: 0.5s;
+    cursor:pointer;
+}
+
+#animation_col:hover{
+
+    transform: scale(1.08);
+    z-index: 1;
+
+}
+
+#soon{
+
+    padding: 20px 0px;
+    margin-top: 30px;
+   
+}
+
+#soon_col{
+
+    transition: 0.5s;
+    cursor:pointer;
+}
+
+#soon_col:hover{
+
+    transform: scale(1.08);
+    z-index: 1;
+
+}
+
+#thrillers{
+
+    padding: 20px 0px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+   
+}
+
+#thrillers_col{
+
+    transition: 0.5s;
+    cursor:pointer;
+}
+
+#thrillers_col:hover{
+
+    transform: scale(1.08);
+    z-index: 1;
+
+}
+
+#shop_button{
+
+    padding:10px 25px;
+    color: white;
+    border: 1px solid blue;
+}
+
 .login_container{
 
     position: absolute;
@@ -44,10 +170,12 @@ header{
 
 }
 
+
+
 footer{
     width: 100vw;
-    background-color: black;
-    color: white;
+    background-color:#f9f8f8;
+    color: black;
     text-align: center;
     padding:20px 0px;
     position: fixed;
@@ -55,37 +183,6 @@ footer{
 }
 
 
-
-
-.banner{
-
-    width:100vw;
-    height: 100vh;
-    background-image:url('../../uploads/movies/banner.jpg');
-    background-size: cover;
-    background-position: center top;
-
-}
-
-.banner-item{
-
-    position: absolute;
-    width: 1100px;
-    height: 150px;
-    /* background-color: gray; */
-    top: 40%;
-    margin: 0 auto 0 auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
-
-.banner-item > h1{
-
-    font-size: 60px;
-    font-weight: 700;
-    color: white;
-}
 
 .login_button{
 
@@ -111,32 +208,7 @@ footer{
     top:5px;
 }
 
-.hamburger{
-    display: none;
-}
 
-.hamburger .line{
-
-   width: 30px;
-   height: 3px;
-   margin: 6px 0;
-   background-color:gainsboro;
-}
-
-.nav-bar > ul{
-
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.nav-bar > ul > li > a{
-
-    padding: 0px 25px;
-    color:white;
-    font-weight: 600;
-    text-decoration: none;
-}
 
 .col-3{
 
@@ -153,67 +225,52 @@ footer{
 
 /* header css ends here */
 
+@media only screen and (max-width: 1000px){
 
-/* media query for screen sizes */
+    #text_banner{
 
-@media only screen and (max-width: 900px){
-
-    .header{
-
-        position: relative;
-    }
-
-    .hamburger{
-
-        display: block;
-        cursor: pointer;
-    }
-
-    .nav-bar{
-
-        position: absolute;
-        top:80px;
-        width: 100vw;
+        margin: 0 auto 0 auto;
         left: 0;
         right: 0;
-        margin: 0 auto 0auto;
-        overflow: hidden;
-        height: 0px;
-        transition: 1s;
-        background-color: #e7e7e7;
-        z-index: 1;
-
+        text-align: center;
     }
 
-    .nav-bar > ul{
+    #text_banner > h1{
 
-        display: block;
-        width: fit-content;
-        margin: 80px auto 0 auto;
-        text-align: justify;
-        opacity: 0;
-        transition: 1s;
+        font-size: 20px;
+        color:white;
+        line-height: 30px;
     }
 
-    .nav-bar > ul > li{
+   
 
-        margin-bottom: 20px;
-    }
-
-    /* nav bar active class section for click event */
-
-    .nav-bar.active{
-
-        height: 315px;
-    }
-
-    .nav-bar.active > ul{
-
-        opacity: 1;
-    }
 
 
 }
+
+
+/* @media only screen and (max-width: 1400px){
+
+    #text_banner{
+
+        margin: 0 auto 0 auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    #text_banner > h1{
+
+        font-size: 30px;
+        color:white;
+        line-height: 40px;
+    }
+
+
+
+
+} */
+
 
 
 

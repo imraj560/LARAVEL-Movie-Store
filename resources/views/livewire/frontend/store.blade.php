@@ -1,7 +1,8 @@
+
 <div class="row" style="padding:20px 30px">
-    <div class="col-2">
+    <div class="col-xl-2 col-lg-6 col-md-12 col-sm-12" >
         <div class="card">
-            <div class="card-header" style="background:black; color:white;"><h4>Genre</h4></div>
+            <div class="card-header"><h4>Genre</h4></div>
                 <div class="card-body">
                     @forelse ($genres as $genre)
 
@@ -16,7 +17,7 @@
 
             </div>
 
-            <div class="card-header" style="background:black; color:white;"><h4>Language</h4></div>
+            <div class="card-header"><h4>Language</h4></div>
             <div class="card-body">
 
                 @forelse ($languages as $language)
@@ -35,7 +36,7 @@
 
         </div>
 
-        <div class="card-header" style="background:black; color:white;"><h4>Price</h4></div>
+        <div class="card-header"><h4>Price</h4></div>
                 <div class="card-body">
 
 
@@ -52,15 +53,15 @@
             </div>
         </div>
     </div>
-    <div class="col-10">
+    <div class="col-xl-10 col-lg-6 col-md-12 col-sm-12">
         <div class="row">
             <div class="form-group" style="margin-bottom:20px;">
 
-                <input wire:model="search" style="border:2px solid black;" type="text" class="form-control" id="search" name="search" placeholder="Enter Movie Name">
+                <input wire:model="search" type="text" class="form-control" id="search" name="search" placeholder="Enter Movie Name">
               </div>
               @forelse ($movies as $movie)
 
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md col-sm-6">
                 <div class="card" style="width: 100%;">
                     <img class="card-img-top" src="{{ $movie->image }}" alt="Card image cap">
                     <div class="card-body" style="background:black; color:white;">
