@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Movies;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -10,9 +11,11 @@ class HomeController extends Controller
 
     public function index()
     {
-
+        $movies_animation = Movies::where('genre_id', 4)->get();
+        $movies_thrillers = Movies::where('genre_id', 1)->get();
+        $movies_soon = Movies::where('genre_id', 5)->get();
         
-        return view('welcome');
+        return view('welcome',compact('movies_animation','movies_thrillers','movies_soon'));
     }
 
 
