@@ -61,7 +61,7 @@
               </div>
               @forelse ($movies as $movie)
 
-              <div class="col-xl-3 col-lg-4 col-md col-sm-6">
+              <div class="col-xl-3 col-lg-4 col-md col-sm-6" style="margin-bottom:50px;">
                 <div class="card" style="width: 100%;">
                     <img class="card-img-top" src="{{ $movie->image }}" alt="Card image cap">
                     <div class="card-body" style="background:black; color:white;">

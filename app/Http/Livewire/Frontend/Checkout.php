@@ -60,6 +60,8 @@ class Checkout extends Component
 
         $this->validate();
 
+        $this->dispatchBrowserEvent('paypal-button');
+
     }
 
 
