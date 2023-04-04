@@ -35,8 +35,8 @@
 
             @else
 
-                <a href="" style="text-decoration:none; color:black;">Cart</a> 
-                <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                <a href="{{ url('/cart') }}" style="text-decoration:none; color:black;">Cart</a> 
+                <span class="badge bg-dark text-white ms-1 rounded-pill"><livewire:frontend.cart-count/></span>
 
                 @if(Auth::user()->role_as == 1)
 

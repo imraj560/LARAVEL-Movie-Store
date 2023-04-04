@@ -17,6 +17,7 @@
                         @error('fullname')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
+                        <span id="msg_name" style="color:red;"></span>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
@@ -26,6 +27,7 @@
                         @error('phone')
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
+                    <span id="msg_phone" style="color:red;"></span>
                     </div>
                 </div><br>
 
@@ -38,6 +40,7 @@
                         @error('email')
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
+                    <span id="msg_email" style="color:red;"></span>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
@@ -47,6 +50,7 @@
                         @error('pincode')
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
+                    <span id="msg_pin" style="color:red;"></span>
                     </div>
                 </div><br>
 
@@ -61,6 +65,7 @@
                             @error('address')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
+                        <span id="msg_address" style="color:red;"></span>
 
                     </div>
                 </div>
@@ -127,6 +132,7 @@
     document.getElementById('cod_div').style.display = 'none';
     document.getElementById('paypal_div').style.display = 'block';
 
+
     }
 </script>
 
@@ -138,7 +144,9 @@
 <script src="https://www.paypal.com/sdk/js?client-id=Af5YnHo-LRkdC_wR28UNQeskfhdhQVESuzt85mBvSr7NFplEy062ptzXCY-V67rvqDWXbOzM_47oJpQr&currency=USD"></script>
 
 <script>
-    paypal.Buttons({
+
+
+     paypal.Buttons({
 
         onClick: function()  {
 
@@ -146,7 +154,12 @@
         if (!document.getElementById('fullname').value || !document.getElementById('phone').value || !document.getElementById('email').value || !document.getElementById('pincode').value
              || !document. getElementById('address').value){
 
-            Livewire.emit('validationForAll');
+             document.getElementById('msg_name').textContent = 'Please fill out this field';
+             document.getElementById('msg_phone').textContent = 'Please fill out this field';
+             document.getElementById('msg_email').textContent = 'Please fill out this field';
+             document.getElementById('msg_pin').textContent = 'Please fill out this field';
+             document.getElementById('msg_address').textContent = 'Please fill out this field';
+           
 
             return false;
 
@@ -186,5 +199,7 @@
         });
       }
     }).render('#paypal-button-container');
+
+   
   </script>
 @endpush

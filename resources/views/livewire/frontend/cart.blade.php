@@ -34,7 +34,7 @@
                 </div>
 
                 {{-- Delete Modal Ends here --}}
-        <table class="table table-stripped" style=" width:70%; margin:0 auto 0 auto">
+        <table class="table table-stripped" style="width:70%; margin:0 auto 0 auto; margin-bottom:100px;">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -93,7 +93,7 @@
 
 </div>
 
-@push('script')
+@push('scripts')
 
 <script>
  document.addEventListener('DOMContentLoaded', () => {
