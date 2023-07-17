@@ -4,6 +4,17 @@
       @if(session('message'))
       <div class="alert alert-success">{{ session('message') }}</div>
       @endif
+
+     <div class="row">
+        <div class="col-md-3 col-sm-12 col-xl-3">
+            <form>
+                <input type="text" class="form-control" wire:model='search' placeholder="search movie"/>
+            </form>
+        </div>
+        
+    </div> 
+      
+
       <div class="card">
 
         <div class="card-header">

@@ -13,7 +13,7 @@ class UserController extends Controller
 
         $users = User::latest()->paginate(2);
 
-        return view('admin.user.view', compact('users'));
+        return view('admin.user.index', compact('users'));
     }
 
     public function create(){

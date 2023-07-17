@@ -12,6 +12,12 @@ class Movie extends Component
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
     public $movie_id;
+    public $search = '';
+
+    public function updatingsearch(): void
+    {
+        $this->gotoPage(1);
+    }
 
     public function closeModal(){
 
@@ -43,7 +49,7 @@ class Movie extends Component
 
     public function render()
     {
-        $movies = Movies::orderBy('id','DESC')->paginate(10);
+        $movies = Movies::where('name', 'like', '%'.$this->search.'%')->orderBy('id','DESC')->paginate(10);
         return view('livewire.admin.movie.index', ['movies'=>$movies]);
     }
 }

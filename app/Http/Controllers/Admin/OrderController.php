@@ -12,7 +12,7 @@ class OrderController extends Controller
 {
     public function index(){
 
-        return view ('admin.order.view');
+        return view ('admin.order.index');
     }
 
     public function genPdf(int $order_id){
