@@ -16,36 +16,18 @@
        <div class="row">
           <div class="col-md-3">
             <div class="card card-body bg-primary text-white mb-3">
-              <label>Total Orders</label>
+              <label>Total Orders: {{ $orders }}</label>
               <h4></h4>
-              <a  class="text-white">View</a>
+              <a href="{{ url('admin/order/view') }}" class="text-white">View</a>
             </div>
 
           </div>
 
           <div class="col-md-3">
             <div class="card card-body bg-success text-white mb-3">
-              <label>Today Order</label>
+              <label>Today Movies: {{ $movies }}</label>
               <h4></h4>
-              <a  class="text-white">View</a>
-            </div>
-
-          </div>
-
-          <div class="col-md-3">
-            <div class="card card-body bg-warning text-white mb-3">
-              <label>This Month Order</label>
-              <h4></h4>
-              <a  class="text-white">View</a>
-            </div>
-
-          </div>
-
-          <div class="col-md-3">
-            <div class="card card-body bg-danger text-white mb-3">
-              <label>This Year Order</label>
-              <h4></h4>
-              <a  class="text-white">View</a>
+              <a href="{{ url('admin/movie/view') }}" class="text-white">View</a>
             </div>
 
           </div>

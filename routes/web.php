@@ -57,7 +57,7 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
     Route::get('/dashboard',[DashboardController::class,'index']);
 
     //Genre
-    Route::get('/genre/view',[GenreController::class, 'index']);
+    Route::get('/genre',[GenreController::class, 'index']);
     Route::get('/genre/create',[GenreController::class, 'create']);
     Route::post('/genre/store',[GenreController::class, 'store']);
     Route::get('/genre/delete/{genre}',[GenreController::class, 'destroy']);
@@ -69,14 +69,14 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
     Route::get('/language/delete/{language}',[LanguageController::class,'destroy']);
 
     //movie
-    Route::get('movie/view',[MovieController::class,'index']);
+    Route::get('/movie',[MovieController::class,'index']);
     Route::get('movie/create',[MovieController::class,'create']);
     Route::post('movie/store',[MovieController::class,'store']);
     Route::get('movie/edit/{id}',[MovieController::class,'edit']);
     Route::post('movie/update/{movies}',[MovieController::class,'update']);
 
     //user
-    Route::get('user/view',[UserController::class,'index']);
+    Route::get('user',[UserController::class,'index']);
     Route::get('user/create',[UserController::class,'create']);
     Route::post('user/store',[UserController::class,'store']);
     Route::get('user/destroy/{user}',[UserController::class,'destroy']);
@@ -84,7 +84,7 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
     Route::post('user/update/{user}',[UserController::class,'update']);
 
     //order 
-    Route::get('order/view',[OrderController::class,'index']);
+    Route::get('order',[OrderController::class,'index']);
     Route::get('/order/download/{order_id}',[OrderController::class,'genPdf']);
 
 
