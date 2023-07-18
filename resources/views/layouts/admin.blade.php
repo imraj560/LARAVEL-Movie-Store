@@ -46,7 +46,7 @@
 
 
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="{{ asset('admin/vendors/base/vendor.bundle.base.js') }}"></script>
   <!-- endinject -->
   <!-- Plugin js for this page-->

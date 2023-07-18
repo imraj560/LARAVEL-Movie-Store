@@ -32,7 +32,41 @@
 
           </div>
        </div>
+
+       <div class="row">
+        <canvas id="myChart"></canvas>
+       </div>
     </div>
   </div>
+
+@endsection
+
+@section('scripts')
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  var labels =  {{ Js::from($labels) }};
+  var data =  {{ Js::from($data) }};
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'orders',
+        data: data,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
 
 @endsection
