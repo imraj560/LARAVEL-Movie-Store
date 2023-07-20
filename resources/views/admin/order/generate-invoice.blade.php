@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>{{ $order->id }}</title>
+    <title>Order Id: {{ $order->id }}</title>
 
     <style>
         html,
@@ -84,13 +84,13 @@
         <thead>
             <tr>
                 <th width="50%" colspan="2">
-                    <h2 class="text-start">Funda Ecommerce</h2>
+                    <h2 class="text-start">Raju's Store</h2>
                 </th>
                 <th width="50%" colspan="2" class="text-end company-data">
                     <span>Invoice Id: #{{ $order->id }}</span> <br>
-                    <span>Date: 24 / 09 / 2022</span> <br>
-                    <span>Zip code : 560077</span> <br>
-                    <span>Address: #555, Main road, shivaji nagar, Bangalore, India</span> <br>
+                    <span>Date: {{ $order->created_at }}</span> <br>
+                    <span>Zip code : {{ $order->pincode }}</span> <br>
+                    <span>Address: {{ $order->address }}</span> <br>
                 </th>
             </tr>
             <tr class="bg-blue">
@@ -115,33 +115,82 @@
             </tr>
             <tr>
                 <td>Ordered Date:</td>
-                <td>22-09-2022 10:54 AM</td>
+                <td>{{ $order->created_at }}</td>
 
                 <td>Phone:</td>
-                <td>8889997775</td>
+                <td>{{ $order->phone }}</td>
             </tr>
-            <tr>
-                <td>Payment Mode:</td>
-                <td>Cash on Delivery</td>
-
-                <td>Address:</td>
-                <td>asda asdad asdad adsasd</td>
-            </tr>
-            <tr>
-                <td>Order Status:</td>
-                <td>completed</td>
-
-                <td>Pin code:</td>
-                <td>566999</td>
-            </tr>
+           
         </tbody>
     </table>
+
+   
+    <table class="table table-bordered table-striped">
+        <thead>
+            <th>Item Id</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Price</th>
+          
+
+        </thead>
+
+        <tbody>
+            @php
+                $totalprice = 0;
+            @endphp
+           @foreach ($order->orderItems as $orderItem)
+            <tr>
+                <td width="10%">{{ $orderItem->id }}</td>
+                <td width="10%">{{ $orderItem->movie->name }}</td>
+
+                <td width="10%">
+
+                    @if($orderItem->movie->image)
+
+                    <img src="{{ $orderItem->movie->image }}" style="width: 50px; height: 50px" alt="">
+
+                    @else
+                    <img src="" style="width: 50px; height: 50px" alt="">
+                    @endif
+
+                   
+
+                </td>
+
+                <td width="10%">{{ $orderItem->price }}</td>
+
+
+
+            </tr>
+
+            @php
+                $totalprice += $orderItem->price;
+            @endphp
+
+
+
+
+
+
+           @endforeach
+
+           <tr>
+            <td colspan="3">Total Price</td>
+            <td>{{ $totalprice }}</td>
+           </tr>
+
+
+        </tbody>
+    </table>
+
+</div>
 
   
 
     <br>
     <p class="text-center">
-        Thank your for shopping with Funda of Web IT
+        Thank your for shopping with Raju's Store
     </p>
 
 </body>

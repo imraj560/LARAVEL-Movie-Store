@@ -15,16 +15,16 @@ class DashboardController extends Controller
         $orders = Order::count();
         $movies = Movies::count();
 
-        $chart_data = Order::select(DB::raw("COUNT(*) as count"), DB::raw("MONTHNAME(created_at) as month_name"))
+        $chart_data_bar = Order::select(DB::raw("COUNT(*) as count"), DB::raw("MONTHNAME(created_at) as month_name"))
         ->whereYear('created_at', date('Y'))
         ->groupBy(DB::raw("MONTHNAME(created_at)"))
         ->pluck('count', 'month_name');
 
 
-        $labels = $chart_data->keys();
-        $data = $chart_data->values();
+        $labels_bar = $chart_data_bar->keys();
+        $data_bar = $chart_data_bar->values();
 
 
-        return view('admin.dashboard',compact('orders','movies','labels','data'));
+        return view('admin.dashboard',compact('orders','movies','labels_bar','data_bar'));
     }
 }
