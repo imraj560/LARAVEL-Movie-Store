@@ -34,7 +34,10 @@
        </div>
 
        <div class="row">
-        <canvas id="myChart"></canvas>
+          <div class="col-12">
+          <canvas id="mybarChart"></canvas>
+          </div>
+        
        </div>
     </div>
   </div>
@@ -44,18 +47,18 @@
 @section('scripts')
 
 <script>
-  const ctx = document.getElementById('myChart');
+  const ctx_bar = document.getElementById('mybarChart');
 
-  var labels =  {{ Js::from($labels) }};
-  var data =  {{ Js::from($data) }};
+  var labels_bar =  {{ Js::from($labels_bar) }};
+  var data_bar =  {{ Js::from($data_bar) }};
 
-  new Chart(ctx, {
+  new Chart(ctx_bar, {
     type: 'bar',
     data: {
-      labels: labels,
+      labels: labels_bar,
       datasets: [{
         label: 'orders',
-        data: data,
+        data: data_bar,
         borderWidth: 1
       }]
     },
