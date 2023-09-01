@@ -30,7 +30,10 @@ Auth::routes([
 ]);
 
 //unauthorized routes
-  Route::get('/',[HomeController::class,'index']);
+Route::get('/',[HomeController::class,'index']);
+
+  //movie view
+Route::get('/product_view/{id}',[StoreController::class, 'product_view']);
 
 //authorized routes
 Route::middleware(['auth','verified'])->group(function(){
