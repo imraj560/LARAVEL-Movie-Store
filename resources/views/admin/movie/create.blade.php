@@ -14,7 +14,7 @@
         <div class="card-header">
          Add Movies
 
-         <a href="{{ url('admin/movie/view') }}" class="btn btn-primary btn-sm text-white float-end text-white">Back</a>
+       
         </div>
 
         <div class="card-body">

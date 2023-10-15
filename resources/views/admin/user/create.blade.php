@@ -13,7 +13,7 @@
 
         <div class="card-header">
          Create User
-         <button style="float:right;" class="btn btn-success"><a style="color:white;" href="{{ url('admin/user/view') }}">Back</a></button>
+        
         </div>
 
         <div class="card-body">

@@ -62,11 +62,13 @@
               @forelse ($movies as $movie)
 
               <div class="col-xl-3 col-lg-4 col-md col-sm-6" style="margin-bottom:50px;">
+                <a href="{{ url('/product_view/'.$movie->id) }}" style="text-decoration: none;">
                 <div class="card" style="width: 100%;">
                     <img class="card-img-top" src="{{ $movie->image }}" alt="Card image cap">
                     <div class="card-body" style="background:black; color:white;">
                       <p class="card-text">{{ $movie->name }} : RM {{ $movie->price }}</p>
                     </div>
+                  </a>    
                     <button wire:click='addCart({{ $movie->id }})' style="margin-top:5px; border:none; border-radius:0" class="btn btn-danger" w-100>Add to Cart</button>
                   </div>
             </div>

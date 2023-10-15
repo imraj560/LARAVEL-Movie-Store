@@ -20,27 +20,27 @@
       </li>
       <li class="nav-item">
         <a href="{{ url('admin/genre') }}" class="nav-link">
-          <i class="mdi mdi-chart-pie menu-icon"></i>
+          <i class="mdi mdi-poll menu-icon"></i>
           <span class="menu-title">Genre</span>
         </a>
       </li>
       <li class="nav-item">
         <a href="{{ url('admin/language/view') }}" class="nav-link">
-          <i class="mdi mdi-chart-pie menu-icon"></i>
+          <i class="mdi mdi-account menu-icon"></i>
           <span class="menu-title">Languages</span>
         </a>
       </li>
 
       <li class="nav-item">
         <a href="{{ url('admin/user') }}" class="nav-link">
-          <i class="mdi mdi-chart-pie menu-icon"></i>
+          <i class="mdi mdi-account-key menu-icon"></i>
           <span class="menu-title">User</span>
         </a>
       </li>
 
       <li class="nav-item">
         <a href="{{ url('/store') }}" class="nav-link">
-          <i class="mdi mdi-chart-pie menu-icon"></i>
+          <i class="mdi mdi-store menu-icon"></i>
           <span class="menu-title">Store</span>
         </a>
       </li>

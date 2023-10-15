@@ -1,12 +1,15 @@
 
 <div class="row" style="width:100vw">
+    <div class="row" id="cart_banner">
+        <h3>Cart Items</h3>
+    </div>
     <div class="col-md-12 grid-margin">
       @if(session('message'))
       <div class="alert alert-success">{{ session('message') }}</div>
       @endif
 <div class="d-flex justify-content-center">
-    <div class="col-md-10" style="text-align:center; padding:20px 15px">
-        <h3 style="margin-bottom:40px">Your cart details goes here</h3>
+    <div class="col-md-10" style="text-align:center; padding:20px 15px; margin-top:40px">
+       
         {{-- Delete Modal Begins here --}}
 
                 <div wire:ignore.self class="modal fade" id="deleteCartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -74,7 +77,7 @@
                 </tr>
                 <tr>
                     @if($totalPrice != 0)
-                        <td colspan="5"><a href="{{ url('/checkout') }}"><button class="btn btn-success float-end">Checkout</button></a></td>
+                        <td colspan="5"><a href="{{ url('/checkout') }}"><button class="btn btn-primary float-end">Checkout</button></a></td>
                     @endif
 
                 </tr>

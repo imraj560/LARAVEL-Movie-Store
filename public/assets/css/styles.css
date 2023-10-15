@@ -29,16 +29,17 @@
     position:relative;
     height: 700px;
     object-fit: contain;
-    background-image: url('../../uploads/movies/moana.jpg');
+    background-image: url('../../uploads/movies/moana2.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.281) 0px 8px 16px -8px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.281) 0px 8px 16px -8px; */
+    margin-bottom: 30px;
 }
 
 #banner_store{
     position:relative;
-    height: 300px;
+    height: 200px;
     object-fit: contain;
     /* background-image: url('../../uploads/movies/moana.jpg'); */
     background-color:#ebe9e7;
@@ -68,11 +69,66 @@
     line-height: 50px;
 }
 
+#services{
+
+    text-align: center;
+    padding: 30px 150px;
+}
+
+#services > .col{
+
+    font-size:40px;
+    /* text-align: center; */
+}
+
+#services .col > p{
+
+    text-align: center;
+    font-size:20px;
+  
+}
+
+#services >h1{
+
+    margin-bottom: 20px;
+}
+
+#services >p{
+
+    margin-bottom: 20px;
+}
+
+
+#customer{
+
+    text-align: center;
+    padding: 30px 150px;
+}
+
+#customer > .col{
+
+    font-size:60px;
+    /* text-align: center; */
+}
+
+#customer .col > p{
+
+    text-align: center;
+    font-size:20px;
+}
+
 #animations{
 
     padding: 20px 0px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    text-align: left;
    
+}
+
+#animations > h4{
+    margin-bottom: 40px;
+    margin-top:130px;
+    
 }
 
 #animation_col{
@@ -92,6 +148,7 @@
 
     padding: 20px 0px;
     margin-top: 30px;
+    margin-bottom: 40px;
    
 }
 
@@ -132,8 +189,8 @@
 #shop_button{
 
     padding:10px 25px;
-    color: white;
-    border: 1px solid blue;
+    background-color: white;
+    border-color: 1px solid white;
 }
 
 .login_container{
@@ -221,6 +278,45 @@ footer{
     transform: scale(1.08);
     z-index: 1;
 
+}
+
+/*Movie Product css*/
+
+#product_container{
+
+    margin-top:50px;
+}
+
+#customer{
+
+    margin: 100px 0px;
+}
+
+#cart_banner{
+
+    min-height: 200px;
+    background-color:#f1f1f1;
+    text-align: center;
+    
+}
+
+#cart_banner > h3{
+
+    line-height: 200px;
+    font-size: 30px;
+}
+
+#checkout_banner{
+
+    min-height: 200px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+#checkout_banner > p{
+
+    line-height: 200px;
+    font-size:30px;
 }
 
 /* header css ends here */
