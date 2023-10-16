@@ -1,10 +1,14 @@
-<div class="row" style="padding:20px;">
+<div class="row" id="checkout_banner">
+  <p>Please pay here</p>
+</div>
+
+<div class="row" style="padding:20px; margin-bottom:100px;">
 
     <div class="col-md-8" style="margin: 0 auto 0 auto;">
         <div class="card">
         <div class="card-header">
           Your Checkout Details
-          <span id="totalAmount" style="float:right; color:red; font-weight:bold; font-size:20px;">${{ $paidAmount }}</span>
+          <span id="totalAmount" style="float:right; color:black; font-size:20px;">Amount: ${{ $paidAmount }}</span>
         </div>
         <div class="card-body">
 

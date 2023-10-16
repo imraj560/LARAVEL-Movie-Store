@@ -5,7 +5,7 @@
 @section('content')
 <div class="row" id="banner_store">
 
-    <p>Our Store</p>
+    <p style="line-height: 200px">Our Store</p>
     
     </div>
 <livewire:frontend.store/>

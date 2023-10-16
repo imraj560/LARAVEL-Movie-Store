@@ -14,7 +14,7 @@
         <div class="card-header">
          Add Language
 
-         <a href="{{ url('admin/language/view') }}" class="btn btn-primary btn-sm text-white float-end text-white">Back</a>
+      
         </div>
 
         <div class="card-body">
