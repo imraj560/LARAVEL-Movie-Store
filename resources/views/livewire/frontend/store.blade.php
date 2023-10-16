@@ -1,6 +1,6 @@
 
 <div class="row" style="padding:20px 30px">
-    <div class="col-xl-2 col-lg-6 col-md-12 col-sm-12" >
+    <div class="col-xl-2 col-lg-6 col-md-12 col-sm-12 " style="margin-bottom: 10px;" >
         <div class="card">
             <div class="card-header"><h4>Genre</h4></div>
                 <div class="card-body">

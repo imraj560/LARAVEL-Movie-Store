@@ -16,15 +16,15 @@
     <h1>Explore</h1>
     <p>Buy contents on high definition, we have all kinds of TV series and upcoming movies</p>
 
-    <div class="col">
+    <div class="col-12 col-lg-4">
         <i class="bi bi-badge-hd-fill"></i>
         <p>High Definition Stream</p>
     </div>
-    <div class="col">
+    <div class="col-12 col-lg-4">
         <i class="bi bi-hdd-network"></i>
         <p>Fast Servers</p>
     </div>
-    <div class="col">
+    <div class="col-12 col-lg-4">
         <i class="bi bi-tv-fill"></i>
         <p>Multiple Screens</p>
     </div>  
@@ -97,19 +97,19 @@
     <h1>Happy Customers</h1>
     <p>Our Viewers are very happy with our services and content</p>
 
-    <div class="col">
+    <div class="col-12 col-lg-4">
         <div class="text-center">
             <img src="{{ asset('uploads/movies/profile1.jpeg') }}" width="100px" class="rounded-circle" alt="...">
           </div>
         <p>They alaways seem to have the latest content and its available on all platforms</p>
     </div>
-    <div class="col">
+    <div class="col-12 col-lg-4">
         <div class="text-center">
             <img src="{{ asset('uploads/movies/profile2.jpg') }}" width="100px"  class="rounded-circle" alt="...">
           </div>
         <p>They have pretty fast servers, the streaming is alaways smooth fast</p>
     </div>
-    <div class="col">
+    <div class="col-12 col-lg-4">
         <div class="text-center">
             <img src="{{ asset('uploads/movies/profile3.jpg') }}" width="100px"  class="rounded-circle" alt="...">
           </div>
@@ -153,26 +153,26 @@
     <h1>We Represent</h1>
     <p>We stream and sell content from popular content creators</p>
 
-    <div class="col">
+    <div class="col-12 col-lg-3">
         <div class="text-center">
             <img src="{{ asset('uploads/movies/netflix.png') }}" width="90px" height="70px" alt="...">
           </div>
         <p>Netflix</p>
     </div>
-    <div class="col">
+    <div class="col-12 col-lg-3">
         <div class="text-center">
             <img src="{{ asset('uploads/movies/prime.png') }}" width="100px" height="70px" class="rounded-circle" alt="...">
           </div>
         <p>Amazon Prime</p>
     </div>
-    <div class="col">
+    <div class="col-12 col-lg-3">
         <div class="text-center">
             <img src="{{ asset('uploads/movies/movie_logo.png') }}" width="100px" height="80px" alt="...">
           </div>
         <p>Fox Pictures</p>
     </div>  
 
-    <div class="col">
+    <div class="col-12 col-lg-3">
         <div class="text-center">
             <img src="{{ asset('uploads/movies/hbo.png') }}" width="100px" height="80px" alt="...">
           </div>
